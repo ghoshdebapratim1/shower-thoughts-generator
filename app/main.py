@@ -21,10 +21,11 @@ from utils import get_base_url
 from aitextgen import aitextgen
 
 # load up a model from memory. Note you may not need all of these options.
-# ai = aitextgen(model_folder="model/",
-#                tokenizer_file="model/aitextgen.tokenizer.json", to_gpu=False)
+#ai = aitextgen(model_folder="model/",
+               #tokenizer_file="model/aitextgen.tokenizer.json", to_gpu=False)
 
-ai = aitextgen(model="distilgpt2", to_gpu=False)
+ai=aitextgen(model_folder="/projects/5103fab6-0065-4153-8105-ff3239402b88/tuned_model_355M_10ksteps" ,to_gpu=True)
+#ai = aitextgen(model="distilgpt2", to_gpu=False)
 
 # setup the webserver
 # port may need to be changed if there are multiple flask servers running on same server
@@ -72,10 +73,13 @@ def generate_text():
     if prompt is not None:
         generated = ai.generate(
             n=1,
-            batch_size=3,
+            batch_size=5,
             prompt=str(prompt),
-            max_length=300,
-            temperature=0.9,
+            prefix='<|startoftext|>',
+            truncate='<|endoftext|>',
+            include_prefix=False,
+            max_length=20,
+            temperature=0.5,
             return_as_list=True
         )
 
@@ -92,7 +96,7 @@ def generate_text():
 
 if __name__ == '__main__':
     # IMPORTANT: change url to the site where you are editing this file.
-    website_url = 'coding.ai-camp.dev'
+    website_url = 'cocalcg42.ai-camp.dev/'
 
     print(f'Try to open\n\n    https://{website_url}' + base_url + '\n\n')
     app.run(host='0.0.0.0', port=port, debug=True)
