@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>LyricBot</title>
+        <title>Reddit Shower Thoughts Generator</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -24,20 +24,19 @@
         <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
-              <li class="sidebar-brand"><a href={{ url_for('home')}}>LyricBot Project</a></li>
+              <li class="sidebar-brand"><a href={{ url_for('home')}}>Reddit ShowerThoughts Generator Project</a></li>
               <li class="sidebar-nav-item"><a href={{ url_for('home')}}>Home </a></li>
-              <li class="sidebar-nav-item"><a href={{ url_for('results')}}>Try The Model</a></li>
-              <li class="sidebar-nav-item"><a href="https://www.github.com">Our Github</a></li>
+              <li class="sidebar-nav-item"><a href={{ url_for('results')}}>Try Generating a Shower Thought</a></li>
+              <li class="sidebar-nav-item"><a href="https://github.com/ghoshdebapratim1/shower-thoughts-generator">Our Github</a></li>
               <li class="sidebar-nav-item"><a href="https://www.ai-camp.org">AI Camp</a></li>
             </ul>
         </nav>
         <!-- Header-->
         <header class="masthead d-flex align-items-center">
             <div class="container px-4 px-lg-5 text-center">
-                <h1 class="mb-1 text-primary">LyricBot</h1>
-                <h2 class="mb-2 text-primary">'Algorithms and Blues' Edition</h2>
-                <h3 class="mb-5 text-light"><em>All your favorite artists. One AI.</em></h3>
-                <a class="btn btn-primary btn-xl" href={{ url_for('results')}}>Try the Model</a>
+                <h1 class="mb-1 text-primary">Reddit ShowerThoughts Generator</h1>
+                <h2 class="mb-2 text-primary">A text generator trained on r/ShowerThoughts posts</h2>
+                <a class="btn btn-primary btn-xl" href={{ url_for('results')}}>Try Generating a new shower thought!</a>
             </div>
         </header>
         <!-- The Project. Note: https://thesabbir.github.io/simple-line-icons/ will give you a cheat sheet for the icons available-->
@@ -49,24 +48,24 @@
                 </div>
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-music-tone-alt"></i></span>
-                        <h4><strong>Great Music Taste</strong></h4>
-                        <p class="text-faded mb-0">LyricBot is a custom trained GPT-2 model that learned from over 94000 lyrics from the best rock artists of all time.</p>
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-emotsmile"></i></span>
+                        <h4><strong>Chuckle worthy texts</strong></h4>
+                        <p class="text-faded mb-0">Generates funny (and sometimes deep) texts akin to the posts from the subreddit r/ShowerThoughts</p>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-playlist"></i></span>
-                        <h4><strong>Interactive</strong></h4>
-                        <p class="text-faded mb-0">LyricBot will write lyrics based off of any prompt you provide it.</p>
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-settings"></i></span>
+                        <h4><strong>Training</strong></h4>
+                        <p class="text-faded mb-0">Trained  on over 170k posts from the subreddit</p>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-clock"></i></span>
-                        <h4><strong>Timeline</strong></h4>
-                        <p class="text-faded mb-0">LyricBot was completed by teenagers over the course of three weeks this summer!</p>
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-magnifier"></i></span>
+                        <h4><strong>Finetuning</strong></h4>
+                        <p class="text-faded mb-0">Finetuned with the GPT2 model with 355 Million parameters  </p>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-docs"></i></span>
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-badge"></i></span>
                         <h4><strong>Extensions</strong></h4>
-                        <p class="text-faded mb-0">Some extensions to this project include deploying it to the web, building a discord bot, or having the algorithms and blues LyricBot interact with new genres!</p>
+                        <p class="text-faded mb-0">Extensions include web deployment and using a custom tokenizer to train the model </p>
                     </div>
                 </div>
             </div>
@@ -83,12 +82,12 @@
                         <a class="portfolio-item" href="#!">
                             <div class="caption">
                                 <div class="caption-content">
-                                    <div class="h1">Cameron Jackson</div>
-                                  <div class="h2">Machine Learning Engineer</div>
-                                    <p class="mb-0">An AI enthusiast who loves Natural Language Processing!</p>
+                                    <div class="h1">Debapratim Ghosh</div>
+                                  <div class="h2">Data Science Intern</div>
+                                    <p class="mb-0">A Statistics student who enjoys working with NLP!</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="{{ url_for('static',filename='img/portfolio-1.jpg') }}" alt="..." />
+                            <img class="img-fluid" src="{{ url_for('static',filename='img/reddit_port_4.png') }}" alt="..." />
                         </a>
                     </div>
                     <div class="col-lg-6">
@@ -96,11 +95,11 @@
                             <div class="caption">
                                 <div class="caption-content">
                                    <div class="h1">Alex Duffy</div>
-                                    <div class="h2">Front End Designer</div>
-                                    <p class="mb-0">A WebDev enthusiast who loves Natural Language Processing!</p>
+                                    <div class="h2">Head of Product at AI Camp</div>
+                                    <p class="mb-0">Building teams & tools to help us teach & learn.</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="{{ url_for('static',filename='img/portfolio-2.jpg') }}" alt="..." />
+                            <img class="img-fluid" src="{{ url_for('static',filename='img/reddit_port_3.png') }}" alt="..." />
                         </a>
                     </div>
                     <div class="col-lg-6">
@@ -108,11 +107,11 @@
                             <div class="caption">
                                 <div class="caption-content">
                                     <div class="h1">Michael Ke Zhang</div>
-                                    <div class="h2">Backend Engineer</div>
-                                    <p class="mb-0">A backend enthusiast who loves Natural Language Processing!</p>
+                                    <div class="h2">Co-Founder and CEO at AI-Camp</div>
+                                    <p class="mb-0">Educator and Entrepreneur with a vision to modernize AI Education</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="{{ url_for('static',filename='img/portfolio-3.jpg') }}" alt="..." />
+                            <img class="img-fluid" src="{{ url_for('static',filename='img/reddit_port_2.png') }}" alt="..." />
                         </a>
                     </div>
                     <div class="col-lg-6">
@@ -120,37 +119,25 @@
                             <div class="caption">
                                 <div class="caption-content">
                                     <div class="h1">Richard Hsu</div>
-                                    <div class="h2">Project Lead</div>
-                                    <p class="mb-0">A great leader who loves Natural Language Processing!</p>
+                                    <div class="h2">Co-Founder and COO at AI-Camp</div>
+                                    <p class="mb-0">Leader and Entrepreneur </p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="{{ url_for('static',filename='img/portfolio-4.jpg') }}" alt="..." />
+                            <img class="img-fluid" src="{{ url_for('static',filename='img/reddit_port_1.png') }}" alt="..." />
                         </a>
                     </div>
                     <div class="col-lg-6">
                         <a class="portfolio-item" href="#!">
                             <div class="caption">
                                 <div class="caption-content">
-                                    <div class="h1">Cydnee Harris</div>
-                                    <div class="h2">Quality Control</div>
-                                    <p class="mb-0">A thorough quality controller who loves Natural Language Processing!</p>
+                                    <div class="h1">Mitch Cutts </div>
+                                    <div class="h2">Lead Data Scientist at AI Camp</div>
+                                    <p class="mb-0">Passionate leader with a background in computer science, mathematics, and data science</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="{{ url_for('static',filename='img/portfolio-4.jpg') }}" alt="..." />
+                            <img class="img-fluid" src="{{ url_for('static',filename='img/reddit_port_5.png') }}" alt="..." />
                         </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h1">Stella Dong</div>
-                                    <div class="h2">Front End Engineer</div>
-                                    <p class="mb-0">An html enthusiast who loves Natural Language Processing!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="{{ url_for('static',filename='img/portfolio-1.jpg') }}" alt="..." />
-                        </a>
-                    </div>
+                  </div>
                 </div>
             </div>
         </section>
@@ -168,7 +155,7 @@
                         <a class="social-link rounded-circle text-white" href="https://github.com/minimaxir/aitextgen"><i class="icon-social-github"></i></a>
                     </li>
                 </ul>
-                <p class="text-muted small mb-0">Copyright &copy; LyricBot AI Camp Team (mitch cutts) 2022 </p>
+                <p class="text-muted small mb-0">Copyright &copy;Reddit ShowerThoughts Generator AI Camp Team (deb ghosh) 2022 </p>
             </div>
         </footer>
         <!-- Scroll to Top Button-->
